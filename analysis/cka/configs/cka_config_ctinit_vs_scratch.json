@@ -1,0 +1,33 @@
+{
+    "group_name": "ACT_vs_Scratch",
+    "split": "validation",
+    "out_channels": 2,
+    "norm_name": "instance",
+    "num_workers": 4,
+    "include_encdec": false,
+
+    "pairs": [
+        {
+            "arch_a": "smit",
+            "run_a":  "rectal_smit_128x128x64_scratch",
+            "name_a": "SMIT Scratch",
+            "img_size_a": [128, 128, 64],
+
+            "arch_b": "smit",
+            "run_b":  "rectal_smit_128x128x64_pretrained",
+            "name_b": "SMIT CT-Init.",
+            "img_size_b": [128, 128, 64]
+        },
+        {
+            "arch_a": "swinunetr",
+            "run_a":  "rectal_swinunetr_96x96x64_scratch",
+            "name_a": "Swin UNETR Scratch",
+            "img_size_a": [96, 96, 64],
+
+            "arch_b": "swinunetr",
+            "run_b":  "rectal_swinunetr_96x96x64_pretrained",
+            "name_b": "Swin UNETR CT-Init.",
+            "img_size_b": [96, 96, 64]
+        }
+    ]
+}

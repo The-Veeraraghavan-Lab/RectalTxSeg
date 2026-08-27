@@ -1,0 +1,97 @@
+RectalTxSeg - third-party attribution
+=====================================
+
+Original code in this repository is Copyright (c) 2026 Memorial Sloan Kettering Cancer Center and is released under the MIT License (see LICENSE). Third-party material is identified below with its upstream project and applicable license terms. Existing license headers must be preserved in any redistribution.
+
+
+Apache License 2.0 - MONAI Consortium
+-------------------------------------
+Project: MONAI (https://github.com/Project-MONAI/MONAI)
+License: https://www.apache.org/licenses/LICENSE-2.0
+
+Adapted files:
+  optimizers/lr_scheduler.py
+  utils/utils.py
+  utils/data_utils.py
+  trainer.py
+  main_training.py
+
+
+Apache License 2.0 - MONAI / NVIDIA research contributions
+----------------------------------------------------------
+Project: MONAI Research Contributions - SwinUNETR
+         (https://github.com/Project-MONAI/research-contributions/tree/main/SwinUNETR/Pretrain)
+License: https://www.apache.org/licenses/LICENSE-2.0
+
+Adapted files:
+  models/swin_nvidia.py
+  models/effidec3d.py
+
+Reference:
+  Hatamizadeh, A., Nath, V., Tang, Y., Yang, D., Roth, H. and Xu, D., 2022. Swin UNETR: Swin Transformers for Semantic Segmentation of Brain Tumors in MRI Images, 10.48550. arXiv preprint arXiv.2201.01266.
+
+EffiDec3D decoder design reference:
+  Rahman, M.M. and Marculescu, R., 2025, June. EffiDec3D: an optimized decoder for high-performance and efficient 3D medical image segmentation. In 2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 10435-10444). IEEE.
+  Project: https://github.com/SLDGroup/EffiDec3D
+
+The SwinUNETR self-supervised encoder checkpoint (model_swinvit.pt), pretrained on 5,050 public CT volumes, is distributed by MONAI at:
+  https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.8.1/model_swinvit.pt
+It is not redistributed here.
+
+Reference:
+  Tang, Y., Yang, D., Li, W., Roth, H.R., Landman, B., Xu, D., Nath, V. and Hatamizadeh, A., 2022, June. Self-supervised pre-training of swin transformers for 3d medical image analysis. In 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 20698-20708). IEEE.
+
+
+SMIT
+----
+Project: SMIT - Self-supervised Masked Image Transformer
+         (https://github.com/The-Veeraraghavan-Lab/SMIT)
+
+models/smit.py and models/configs_smit.py are adapted from the SMIT reference implementation. Consult the upstream repository for its current license terms before redistributing these files.
+
+Reference:
+  Jiang, J., Tyagi, N., Tringale, K., Crane, C. and Veeraraghavan, H., 2022, September. Self-supervised 3D anatomy segmentation using self-distilled masked image transformer (SMIT). In International conference on medical image computing and computer-assisted intervention (pp. 556-566). Cham: Springer Nature Switzerland.
+
+
+VoCo / Large-Scale-Medical
+--------------------------
+Project: https://github.com/Luffy03/Large-Scale-Medical
+License: Apache License 2.0
+Models:  https://huggingface.co/Luffy503/VoCo/tree/main
+
+The VoCo/SwinV2 encoder configuration handled in models/swin_voco_utils.py follows the upstream VoCo pretraining setup. Pretrained weights are not distributed with this repository; download VoCo_B_SSL_head.pt from the model hub above under its own terms.
+
+References:
+  Wu, L., Zhuang, J. and Chen, H., 2025. Large-scale 3d medical image pre-training with geometric context priors. IEEE Transactions on Pattern Analysis and Machine Intelligence.
+
+  Wu, L., Zhuang, J. and Chen, H., 2024, June. Voco: A simple-yet-effective volume contrastive learning framework for 3d medical image analysis. In 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 22873-22882). IEEE.
+
+
+LoRA-Ensemble
+-------------
+Project: https://github.com/prs-eth/LoRA-Ensemble
+License: MIT
+
+Adapted file:
+  models/lora_ensemble/lora_core.py
+
+The batching layout, segmentation integration, and decoder-ensemble extensions are repository-specific.
+
+Reference:
+  Mühlematter, D.J., Halbheer, M., Becker, A., Narnhofer, D., Aasen, H., Schindler, K. and Turkoglu, M.O., 2024. Lora-ensemble: Efficient uncertainty modelling for self-attention networks. Transactions on Machine Learning Research (TMLR), 2026.
+
+
+Surface Distance
+----------------
+Project: google-deepmind/surface-distance
+         (https://github.com/google-deepmind/surface-distance)
+License: Apache License 2.0
+
+Used as an external dependency by analysis/metrics/lits_metric_utils.py. Not vendored into this repository.
+
+
+Data
+----
+No patient data, imaging, or derived case tables are distributed with this repository. Selected pretrained and fine-tuned model weights are hosted separately from git at:
+  https://mskcc.box.com/s/df1qdt2js9495ahtldgkooh1cigrwml8
+The clinical cohort referenced in the accompanying publications is not publicly available.

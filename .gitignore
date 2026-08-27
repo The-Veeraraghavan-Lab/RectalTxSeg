@@ -1,0 +1,122 @@
+# ── System ────────────────────────────────────────────────────────────────────
+.DS_Store
+**/.DS_Store
+*.swp
+*.tmp
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+
+# ── Model weights & checkpoints ───────────────────────────────────────────────
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# ── Medical imaging data ──────────────────────────────────────────────────────
+*.nii
+*.nii.gz
+*.dcm
+*.mhd
+*.raw
+
+# ── Binary / serialised outputs ───────────────────────────────────────────────
+*.pkl
+*.npy
+*.npz
+*.h5
+*.hdf5
+
+# ── Figures & presentations ───────────────────────────────────────────────────
+*.pdf
+*.pptx
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.eps
+*.tiff
+*.tif
+
+# ── Tabular analysis outputs ──────────────────────────────────────────────────
+*.csv
+analysis/csvs/
+
+# ── Dataset directories ───────────────────────────────────────────────────────
+data_rectal/
+data_dir/
+
+# ── Training outputs ──────────────────────────────────────────────────────────
+runs/
+results/
+
+# ── Analysis outputs ──────────────────────────────────────────────────────────
+cka_analysis_results/
+analysis/results/
+analysis/outputs/
+analysis/figures/
+analysis/radiomics/
+analysis/embeddings/
+
+# ── Public analysis scripts; other files in these folders stay local ──────────
+analysis/attention/*
+!analysis/attention/
+!analysis/attention/attention_metrics_core.py
+
+analysis/features/*
+!analysis/features/
+!analysis/features/dump_embeddings.py
+!analysis/features/extract_deep_features.py
+
+analysis/preprocessing/*
+!analysis/preprocessing/
+!analysis/preprocessing/run_folder_inference.py
+!analysis/preprocessing/run_single_case_pipeline.py
+
+analysis/runtime/*
+!analysis/runtime/
+!analysis/runtime/benchmark_inference.py
+!analysis/runtime/merge_runtime_benchmarks.py
+
+analysis/tumor/*
+!analysis/tumor/
+!analysis/tumor/tumor_intensity_analysis.py
+
+analysis/uncertainty/*
+!analysis/uncertainty/
+!analysis/uncertainty/*.py
+
+# ── Markdown (allowlisted) ────────────────────────────────────────────────────
+*.md
+!README.md
+!AGENTS.md
+!CLAUDE.md
+!analysis/README.md
+!models/lora_ensemble/README.md
+!pretrained_models/README.md
+
+# ── JSON (allowlisted) ────────────────────────────────────────────────────────
+*.json
+!analysis/cka/configs/*.json
+
+# ── Local data / working directories ──────────────────────────────────────────
+/newpaper
+/Rectal2024
+server_manifest.txt
+
+*.tgz
+
+# ── Local orchestration scripts (allowlisted) ─────────────────────────────────
+scripts/*
+!scripts/
+!scripts/standalone_contour_overlay.py

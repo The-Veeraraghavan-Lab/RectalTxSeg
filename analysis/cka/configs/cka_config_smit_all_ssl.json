@@ -1,0 +1,45 @@
+{
+    "group_name": "SMIT_vs_SSL",
+    "split": "validation",
+    "out_channels": 2,
+    "norm_name": "instance",
+    "num_workers": 4,
+    "include_encdec": false,
+    "smit_ssl_path": "pretrained_models/model_smit_ct10k.pth",
+
+    "pairs": [
+        {
+            "arch_a": "smit",
+            "run_a":  "rectal_smit_128x128x128_base",
+            "name_a": "SMIT-Base",
+            "img_size_a": [128, 128, 128],
+
+            "arch_b": "smit",
+            "pretrained_b": true,
+            "name_b": "SSL",
+            "img_size_b": [128, 128, 128]
+        },
+        {
+            "arch_a": "smit",
+            "run_a":  "rectal_smit_128x128x128_pretrained",
+            "name_a": "SMIT-TA",
+            "img_size_a": [128, 128, 128],
+
+            "arch_b": "smit",
+            "pretrained_b": true,
+            "name_b": "SSL",
+            "img_size_b": [128, 128, 128]
+        },
+        {
+            "arch_a": "smit",
+            "run_a":  "rectal_smit_128x128x64_pretrained",
+            "name_a": "SMIT-ACT",
+            "img_size_a": [128, 128, 64],
+
+            "arch_b": "smit",
+            "pretrained_b": true,
+            "name_b": "SSL",
+            "img_size_b": [128, 128, 64]
+        }
+    ]
+}
